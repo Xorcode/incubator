@@ -201,9 +201,9 @@ class HandlerSocket extends Adapter implements AdapterInterface
      * @param  string  $id
      * @return boolean
      */
-    public function destroy($id)
+    public function destroy($session_id = null)
     {
-        $this->hs->executeDelete($this->hsIndex, '=', array($id), 1, 0);
+        $this->hs->executeDelete($this->hsIndex, '=', array($session_id), 1, 0);
 
         return true;
     }

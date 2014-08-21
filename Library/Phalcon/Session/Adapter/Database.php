@@ -156,7 +156,7 @@ class Database extends Adapter implements AdapterInterface
      * {@inheritdoc}
      * @return boolean
      */
-    public function destroy()
+    public function destroy($session_id = null)
     {
         if (!$this->isStarted() || $this->isDestroyed) {
             return true;
